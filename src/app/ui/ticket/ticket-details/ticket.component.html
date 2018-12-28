@@ -22,7 +22,7 @@
   <button class="mat-raised-button" (click)="close()">
     Close
   </button>
-  <button class="mat-raised-button mat-primary" (click)="save()">
+  <button class="mat-raised-button mat-primary" [disabled]="!ticketForm.valid" (click)="save()">
     Save
   </button>
 </mat-dialog-actions>

@@ -15,7 +15,7 @@ import { TicketComponent } from "../ticket-details/ticket.component";
 })
 export class TicketsComponent implements OnInit {
 
-  displayedColumns: string[] = ['phone', 'status', 'note', 'action'];
+  displayedColumns: string[] = ['phone', 'status', 'note', 'createDate', 'updateDate', 'action'];
   tickets: Ticket[];
 
   constructor(
@@ -33,7 +33,6 @@ export class TicketsComponent implements OnInit {
     this.ticketService.getTickets().subscribe(
       (data: any) => this.tickets = data.tickets
     );
-    console.log('TicketComponent -> getTickets', this.tickets);
   }
 
   onSelect(ticket: Ticket) {
@@ -49,7 +48,10 @@ export class TicketsComponent implements OnInit {
       dialogConfig);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: `, result);
+      console.log(`Updated ticket after dialog close: `, result);
+      if (result) {
+        this.getTickets();
+      }
     });
   }
 
