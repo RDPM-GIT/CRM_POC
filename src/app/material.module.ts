@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import {
     MatButtonModule, MatCardModule, MatDialogModule, MatInputModule, MatSelectModule, MatTableModule,
-    MatToolbarModule, MatMenuModule, MatProgressSpinnerModule
+    MatToolbarModule, MatMenuModule, MatProgressSpinnerModule, MatSidenavModule, MatListModule
 } from '@angular/material';
 
 import { MatIconModule } from '@angular/material/icon';
@@ -20,6 +20,8 @@ import { MatIconModule } from '@angular/material/icon';
         MatTableModule,
         MatMenuModule,
         MatIconModule,
+        MatSidenavModule,
+        MatListModule,
         MatProgressSpinnerModule
     ],
     exports: [
@@ -33,6 +35,8 @@ import { MatIconModule } from '@angular/material/icon';
         MatTableModule,
         MatMenuModule,
         MatIconModule,
+        MatSidenavModule,
+        MatListModule,
         MatProgressSpinnerModule
     ],
 })

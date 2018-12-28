@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TicketsComponent } from './ui/ticket/ticket-list/tickets.component';
 
 const routes: Routes = [
-  /*{ path: '', redirectTo: '/tickets', pathMatch: 'full' },*/
+  { path: '', redirectTo: '/tickets', pathMatch: 'full' },
   { path: 'tickets', component: TicketsComponent }
 ];
 
