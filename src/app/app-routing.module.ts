@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { TicketsComponent } from './ui/ticket/tickets.component';
+import { TicketsComponent } from './ui/ticket/ticket-list/tickets.component';
 
 const routes: Routes = [
   /*{ path: '', redirectTo: '/tickets', pathMatch: 'full' },*/

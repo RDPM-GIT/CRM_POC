@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Call Details</h2>
+<mat-dialog-content [formGroup]="ticketForm">
+  <mat-form-field>
+    <input matInput placeholder="Phone" formControlName="phone" readonly>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Select status" formControlName="status">
+      <mat-option value="Missed">
+        Missed</mat-option>
+      <mat-option value="Attended">
+        Attended</mat-option>
+      <mat-option value="Customer Contacted">
+        Customer Contacted</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Note" formControlName="note">
+        </textarea>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button class="mat-raised-button" (click)="close()">
+    Close
+  </button>
+  <button class="mat-raised-button mat-primary" (click)="save()">
+    Save
+  </button>
+</mat-dialog-actions>
